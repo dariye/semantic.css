@@ -1,0 +1,564 @@
+html,
+body {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  border-collapse: separate;
+  -o-border-image: none;
+  border-image: none;
+  border-spacing: 0;
+  bottom: auto;
+  box-sizing: content-box;
+  caption-side: top;
+  clip: auto;
+  color: #000;
+  -webkit-columns: auto;
+  columns: auto;
+  -webkit-column-count: auto;
+  column-count: auto;
+  -webkit-column-fill: balance;
+  column-fill: balance;
+  grid-column-gap: normal;
+  -webkit-column-gap: normal;
+  column-gap: normal;
+  -webkit-column-rule: medium none currentColor;
+  column-rule: medium none currentColor;
+  -webkit-column-span: 1;
+  column-span: 1;
+  -webkit-column-width: auto;
+  column-width: auto;
+  content: normal;
+  counter-increment: none;
+  counter-reset: none;
+  display: inline;
+  empty-cells: show;
+  font-family: serif;
+  font-size: medium;
+  font-style: normal;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  line-height: normal;
+  height: auto;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  letter-spacing: normal;
+  list-style: disc outside none;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  orphans: 2;
+  outline: medium none invert;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: auto;
+  -webkit-perspective: none;
+  perspective: none;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  position: static;
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+  table-layout: auto;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  top: auto;
+  -webkit-transform: none;
+  -webkit-transform-origin: 50% 50% 0;
+  -webkit-transform-style: flat;
+  transform-style: flat;
+  transition: none 0s ease 0s;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: visible;
+  white-space: normal;
+  widows: 2;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  backface-visibility: visible;
+  border-collapse: separate;
+  border-image: none;
+  border-spacing: 0;
+  bottom: auto;
+  box-sizing: content-box;
+  caption-side: top;
+  clip: auto;
+  color: #000;
+  columns: auto;
+  column-count: auto;
+  column-fill: balance;
+  grid-column-gap: normal;
+  column-gap: normal;
+  column-rule: medium none currentColor;
+  column-span: 1;
+  column-width: auto;
+  content: normal;
+  counter-increment: none;
+  counter-reset: none;
+  display: inline;
+  empty-cells: show;
+  font-family: serif;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  line-height: normal;
+  height: auto;
+  hyphens: none;
+  letter-spacing: normal;
+  list-style: disc outside none;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  orphans: 2;
+  outline: medium none invert;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: auto;
+  perspective: none;
+  perspective-origin: 50% 50%;
+  position: static;
+  tab-size: 8;
+  table-layout: auto;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  top: auto;
+  transform-style: flat;
+  transition: none 0s ease 0s;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: visible;
+  white-space: normal;
+  widows: 2;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+  all: initial;
+}
+
+html[dir],
+[dir] body {
+  border: medium none currentColor;
+  border-radius: 0;
+  box-shadow: none;
+  clear: none;
+  cursor: auto;
+  float: none;
+  margin: 0;
+  padding: 0;
+  text-align-last: auto;
+  text-shadow: none;
+  transform: none;
+  transform-origin: 50% 50% 0;
+  border: medium none currentColor;
+  border-radius: 0;
+  box-shadow: none;
+  clear: none;
+  cursor: auto;
+  float: none;
+  margin: 0;
+  padding: 0;
+  text-align-last: auto;
+  text-shadow: none;
+  transform: none;
+  transform-origin: 50% 50% 0;
+}
+
+html[dir=ltr],
+[dir=ltr] body {
+  -webkit-animation: none 0s ease 0s 1 normal none running;
+  animation: none 0s ease 0s 1 normal none running;
+  background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+  direction: ltr;
+  left: auto;
+  right: auto;
+  text-align: left;
+  animation: none 0s ease 0s 1 normal none running;
+  background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+  direction: ltr;
+  left: auto;
+  right: auto;
+  text-align: left;
+}
+
+html[dir=rtl],
+[dir=rtl] body {
+  -webkit-animation: none 0s ease 0s 1 normal none running;
+  animation: none 0s ease 0s 1 normal none running;
+  background: transparent none repeat 100% 0 / auto auto padding-box border-box scroll;
+  direction: rtl;
+  right: auto;
+  left: auto;
+  text-align: right;
+  animation: none 0s ease 0s 1 normal none running;
+  background: transparent none repeat 100% 0 / auto auto padding-box border-box scroll;
+  direction: rtl;
+  right: auto;
+  left: auto;
+  text-align: right;
+}
+
+/**
+ * Imports
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,600|Open+Sans');
+
+/**
+ * Variables
+ */
+
+:root {
+  --primary-color: black;
+  --secondary-color: yellow;
+  --accent-color: orange;
+  --scale: 0.5;
+  --font-size: calc(1vw + 1vh + 2.5vmin);
+  --font-family-primary: "Open Sans", sans-serif;
+  --font-family-secondary: "Nunito", sans-serif;
+}
+
+/**
+ * Global
+ */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: calc(1vw + 1vh + 2.5vmin);
+  font-size: var(--font-size);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+[dir] *,
+[dir] *::before,
+[dir] *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+/**
+ * Sectioning root
+ */
+
+body {
+  height: 100%;
+  font-size: inherit;
+  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-family-primary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+[dir] body {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/**
+ * Content sectioning
+ */
+
+address,
+article,
+aside,
+footer,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+main,
+nav,
+section {
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+  font-family: var(--font-family-secondary);
+}
+
+/*
+address
+
+article
+
+aside
+
+footer
+
+header
+
+h1
+  font-size:
+    20px
+
+h2
+
+h3
+
+h4
+
+h5
+
+h6
+
+hgroup
+
+main
+
+nav
+
+section
+*/
+
+/**
+ * Text content
+ */
+/*
+blockquote
+
+dd
+
+dir
+
+div
+
+dl
+
+dt
+
+figcaption
+
+figure
+
+hr
+
+li
+
+ol
+
+p
+
+pre
+
+ul
+*/
+
+/**
+ * Inline text semantics
+ */
+/*
+a
+
+abbr
+
+b
+
+bdi
+
+bdo
+
+br
+
+cite
+
+code
+
+data
+
+dfn
+
+em
+
+i
+
+kbd
+
+mark
+
+q
+
+rb
+
+s
+
+samp
+
+small
+
+span
+
+strong
+
+sub
+
+sup
+
+time
+
+tt
+
+u
+
+var
+
+wbr
+*/
+/**
+ * Image and multimedia
+ */
+/*
+area
+
+audio
+
+img
+
+map
+
+track
+
+video
+
+*/
+
+/**
+ * Embedded content
+ */
+/*
+applet
+
+embed
+
+iframe
+
+noembed
+
+object
+
+*/
+
+/**
+ * Demarcating edits
+ */
+/*
+del
+
+ins
+*/
+/**
+ * Table content
+ */
+/*
+caption
+
+col
+
+colgroup
+
+table
+
+tbody
+
+td
+
+tfoot
+
+th
+
+thead
+
+tr
+*/
+/**
+ * Forms
+ */
+/*
+button
+
+datalist
+
+fieldset
+
+form
+
+input
+
+label
+
+legend
+
+meter
+
+optgroup
+
+option
+
+output
+
+progress
+
+select
+
+textarea
+*/
+/**
+ * Interactive elements
+ */
+
+/*
+details
+
+dialog
+
+menu
+
+menuitem
+
+summary
+*/
+
+/**
+ * Media Queries
+ */
+
+/* @custom-media --small-viewport (max-width: 30em); */
+

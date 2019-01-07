@@ -1,0 +1,319 @@
+/**
+ * Imports
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,600|Open+Sans');
+
+/**
+ * Variables
+ */
+
+:root {
+  --primary-color: black;
+  --secondary-color: yellow;
+  --accent-color: orange;
+  --scale: 0.5;
+  --font-size: calc(1vw + 1vh + 2.5vmin);
+  --font-family-primary: "Open Sans", sans-serif;
+  --font-family-secondary: "Nunito", sans-serif;
+}
+
+/**
+ * Global
+ */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: var(--font-size);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+
+/**
+ * Sectioning root
+ */
+
+body {
+  margin: 0;
+  height: 100%;
+  font-size: inherit;
+  font-family: var(--font-family-primary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+}
+
+/**
+ * Content sectioning
+ */
+@custom-selector :--sectioning address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, main, nav, section;
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+:--sectioning {
+  font-size: inherit;
+}
+
+:--headings {
+  font-family: var(--font-family-secondary);
+}
+
+/*
+address
+
+article
+
+aside
+
+footer
+
+header
+
+h1
+  font-size:
+    20px
+
+h2
+
+h3
+
+h4
+
+h5
+
+h6
+
+hgroup
+
+main
+
+nav
+
+section
+*/
+
+/**
+ * Text content
+ */
+/*
+blockquote
+
+dd
+
+dir
+
+div
+
+dl
+
+dt
+
+figcaption
+
+figure
+
+hr
+
+li
+
+ol
+
+p
+
+pre
+
+ul
+*/
+
+/**
+ * Inline text semantics
+ */
+/*
+a
+
+abbr
+
+b
+
+bdi
+
+bdo
+
+br
+
+cite
+
+code
+
+data
+
+dfn
+
+em
+
+i
+
+kbd
+
+mark
+
+q
+
+rb
+
+s
+
+samp
+
+small
+
+span
+
+strong
+
+sub
+
+sup
+
+time
+
+tt
+
+u
+
+var
+
+wbr
+*/
+/**
+ * Image and multimedia
+ */
+/*
+area
+
+audio
+
+img
+
+map
+
+track
+
+video
+
+*/
+
+/**
+ * Embedded content
+ */
+/*
+applet
+
+embed
+
+iframe
+
+noembed
+
+object
+
+*/
+
+/**
+ * Demarcating edits
+ */
+/*
+del
+
+ins
+*/
+/**
+ * Table content
+ */
+/*
+caption
+
+col
+
+colgroup
+
+table
+
+tbody
+
+td
+
+tfoot
+
+th
+
+thead
+
+tr
+*/
+/**
+ * Forms
+ */
+/*
+button
+
+datalist
+
+fieldset
+
+form
+
+input
+
+label
+
+legend
+
+meter
+
+optgroup
+
+option
+
+output
+
+progress
+
+select
+
+textarea
+*/
+/**
+ * Interactive elements
+ */
+
+/*
+details
+
+dialog
+
+menu
+
+menuitem
+
+summary
+*/
+
+/**
+ * Media Queries
+ */
+
+/* @custom-media --small-viewport (max-width: 30em); */
+
