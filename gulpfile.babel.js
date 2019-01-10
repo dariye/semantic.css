@@ -52,13 +52,13 @@ export const clean = () => del([BUILD_DIR])
 
 export function styles() {
   const commonPlugins = [
-    reset(),
     initial(),
+    reset(),
     nestedProps(),
     precss(),
     utilities(),
     short(),
-    rtl(),
+    // rtl(),
     lost(),
     colorguard(),
     doiuse({

@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <title>Semantic HTML sans semantic.css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/codemirror.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/mode/css/css.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/addon/fold/xml-fold.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.42.2/mode/htmlmixed/htmlmixed.js"></script>
+    <style>
+      .CodeMirror {
+        height: auto;
+      }
+
+      .code {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2>
+          <a href="https://html.spec.whatwg.org/multipage/#toc-semantics" target="_blank">Semantics HTML elements by function</a></h2>
+        <ul>
+          <li><a href="#main-root">Main root</a></li>
+          <li><a href="#document-metadata">Document metadata</a></li>
+          <li><a href="#sectioning-root">Sectioning root</a></li>
+          <li><a href="#content-sectioning">Content Sectioning</a></li>
+          <li><a href="#text-content">Text Content</a></li>
+          <li><a href="#inline-text-semantics">Inline text semantics</a></li>
+          <li><a href="#image-and-multimedia">Image and multimedia</a></li>
+          <li><a href="#embedded-content">Embedded content</a></li>
+          <li><a href="#scripting">Scripting</a></li>
+          <li><a href="#demarcating-edits">Demarcating edits</a></li>
+          <li><a href="#table-content">Table content</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#interactive-elements">Interactive elements</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Semantic HTML sans semantic.css</h1>
+
+      <section>
+        <h2 id="main-root">Main root</h2>
+
+        <article>
+          <h3 id="html">&lt;html&gt;</h3>
+        </article>
+      </section>
+      <section>
+        <h2 id="document-metadata">Document metadata</h2>
+
+        <article>
+          <h3 id="base">&lt;base&gt;</h3>
+        </article>
+        <article>
+          <h3 id="head">&lt;head&gt;</h3>
+        </article>
+        <article>
+          <h3 id="link">&lt;link&gt;</h3>
+        </article>
+        <article>
+          <h3 id="meta">&lt;meta&gt;</h3>
+        </article>
+        <article>
+          <h3 id="style">&lt;style&gt;</h3>
+        </article>
+        <article>
+          <h3 id="title>">&lt;title&gt;</h3>
+        </article>
+      </section>
+
+      <section>
+        <h2 id="sectioning-root">Sectioning root</h2>
+        <article>
+          <h3 id="body">&lt;body&gt;</h3>
+          <form>
+            <textarea class="code" id="code-body">
+              <html>
+                <head>
+                  <title>Document title</title>
+                </head>
+                <body>
+                  <p>This is a paragraph</p>
+                </body>
+              </html>
+            </textarea>
+            <button class="run-code">Run</button>
+          </form>
+          <iframe id="iframe-code-body"></iframe>
+        </article>
+      </section>
+
+      <section>
+        <h2 id="content-sectioning">Content Sectioning</h2>
+
+        <article>
+          <h3 id="address">&lt;address&gt;</h3>
+
+          <section>
+            <h4>Code example</h4>
+            <form>
+              <textarea class="code" id="code-address">
+                <p>Contact the author of this page:</p>
+                <address>
+                  <a href="mailto:jim@rock.com">jim@rock.com</a><br/>
+                  <a href="tel:+311-555-2368">+311-555-2368</a><br/>
+                </address>
+              </textarea>
+              <button class="run-code">Run</button>
+            </form>
+            <iframe id="iframe-code-address"></iframe>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="article">&lt;article&gt;</h3>
+
+          <section>
+            <h4>Code Example</h4>
+            <form>
+              <textarea class="code" id="code-article">
+                <article class="forecast">
+                  <h1>Weather forecast for Seattle</h1>
+                  <article class="day-forecast">
+                      <h2>03 March 2018</h2>
+                      <p>Rain.</p>
+                  </article>
+                  <article class="day-forecast">
+                      <h2>04 March 2018</h2>
+                      <p>Periods of rain.</p>
+                  </article>
+                  <article class="day-forecast">
+                      <h2>05 March 2018</h2>
+                      <p>Heavy rain.</p>
+                  </article>
+                </article>
+              </textarea>
+              <button class="run-code">Run</button>
+            </form>
+            <iframe id="iframe-code-article"></iframe>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="aside">&lt;aside&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+              <form>
+                <textarea class="code" id="code-aside">
+                  <p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both larval and adult forms.</p>
+
+                  <aside>
+                      <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+                  </aside>
+
+                  <p>Several species of salamander inhabit the temperate rainforest of the Pacific Northwest, including the Ensatina, the Northwestern Salamander and the Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects, worms and other small creatures.</p>
+                </textarea>
+                <button class="run-code">Run</button>
+              </form>
+              <iframe id="iframe-code-aside"></iframe>
+          </section>
+        </article>
+        <article>
+          <h3 id="footer">&lt;footer&gt;</h3>
+          <section>
+            <h4>Example</h4>
+              <form>
+                <textarea class="code" id="code-footer">
+                  <article>
+                      <h1>How to be a wizard</h1>
+                      <ol>
+                          <li>Grow a long, majestic beard.</li>
+                          <li>Wear a tall pointed hat. </li>
+                          <li>Have I mentioned the beard?</li>
+                      </ol>
+                      <footer>
+                          <p>© 2018 Gandalf</p>
+                      </footer>
+                  </article>
+                  <button class="run-code">Run</button>
+                </textarea>
+                <iframe id="iframe-code-footer"></iframe>
+              </form>
+          </section>
+        </article>
+        <article>
+          <h3 id="header">&lt;header&gt;</h3>
+          <section>
+            <h4>Example</h4>
+              <form>
+                <textarea class="code" id="code-header">
+                  <header class="page-header">
+                      <h1>Cute Puppies Express!</h1>
+                  </header>
+
+                  <main>
+                      <p>I love Beagles <strong>so</strong> much! Like really, a lot. They're adorable and their ears are so, so snuggly soft!</p>
+                  </main>
+                </textarea>
+                <button class="run-code">Run</button>
+              </form>
+              <iframe id="iframe-code-header"></iframe>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="headings">&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+              <form action="">
+                <textarea id="code-headings" class="code" name="" cols="30" rows="10">
+                  <h1>Beetles</h1>
+                      <h2>External morphology</h2>
+                          <h3>Head</h3>
+                              <h4>Mouthparts</h4>
+                          <h3>Thorax</h3>
+                              <h4>Prothorax</h4>
+                              <h4>Pterothorax</h4>
+                </textarea>
+                <button class="run-code">Run</button>
+              </form>
+              <iframe id="iframe-code-headings"></iframe>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="main">&lt;main&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <header>Gecko facts</header>
+
+                  <main role="main">
+                      <p>Geckos are a group of usually small, usually nocturnal lizards. They are found on every continent except Australia.</p>
+                  
+                      <p>Many species of gecko have adhesive toe pads which enable them to climb walls and even windows.</p>
+                  </main>
+                </code>
+              </pre>
+              <figcaption>&lt;main&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+
+        <article>
+          <h3 id="nav">&lt;nav&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code contentEditable spellcheck="false" class="html">
+                  <nav class="crumbs">
+                      <ol>
+                          <li class="crumb"><a href="bikes">Bikes</a></li>
+                          <li class="crumb"><a href="bikes/bmx">BMX</a></li>
+                          <li class="crumb">Jump Bike 3000</li>
+                      </ol>
+                  </nav>
+
+                  <h1>Jump Bike 3000</h1>
+                  <p>This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills.</p>
+                </code>
+              </pre>
+              <figcaption>&lt;nav&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="section">&lt;section&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <section>
+                      <h1>Introduction</h1>
+                      <p>People have been catching fish for food since before recorded history...</p>
+                  </section>
+
+                  <section>
+                      <h1>Equipment</h1>
+                      <p>The first thing you'll need is a fishing rod or pole that you find comfortable and is strong enough for the kind of fish you're expecting to try to land...</p>
+                  </section>
+                </code>
+              </pre>
+              <figcaption>&lt;section&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+
+      <section>
+        <h2 id="text-content">Text content</h2>
+
+        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+
+        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+        
+        
+        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+        
+        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+        
+        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+        
+        
+        <article>
+          <h3 id="blockquote">&lt;blockquote&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote cite="https://www.huxley.net/bnw/four.html">
+                      <p>Words can be like X-rays, if you use them properly – they'll go through anything. You read and you're pierced.</p>
+                      <cite>– Aldous Huxley, Brave New World</cite>
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;blockquote&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+      </section>
+
+      <section>
+        <h2 id="inline-text-semantics">Inline text semantics</h2>
+
+
+        <article>
+          <h3 id="a">&lt;a&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can reach Michael at:</p>
+
+                  <ul>
+                    <li><a href="https://example.com">Website</a></li>
+                    <li><a href="mailto:m.bluth@example.com">Email</a></li>
+                    <li><a href="tel:+123456789">Phone</a></li>
+                  </ul>
+                </code>
+              </pre>
+              <figcaption>&lt;a&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+        
+        <article>
+          <h3 id="abbr">&lt;abbr&gt;</h3>
+
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+                                <p>You can reach Michael at:</p>
+                </code>
+              </pre>
+              <figcaption>&lt;abbr&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+
+      </section>
+
+      <section>
+        <h2 id="image-and-multimedia">Image and multimedia</h2>
+        <article>
+          <h3 id="area">&lt;area;&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <map name="infographic">
+                      <area shape="rect" coords="184,6,253,27"
+                            href="https://mozilla.org"
+                            target="_blank" alt="Mozilla" />
+                      <area shape="circle" coords="130,136,60"
+                            href="https://developer.mozilla.org/"
+                            target="_blank" alt="MDN" />
+                      <area shape="poly" coords="130,6,253,96,223,106,130,39"
+                            href="https://developer.mozilla.org/docs/Web/Guide/Graphics"
+                            target="_blank" alt="Graphics" />
+                      <area shape="poly" coords="253,96,207,241,189,217,223,103"
+                            href="https://developer.mozilla.org/docs/Web/HTML"
+                            target="_blank" alt="HTML" />
+                      <area shape="poly" coords="207,241,54,241,72,217,189,217"
+                            href="https://developer.mozilla.org/docs/Web/JavaScript"
+                            target="_blank" alt="JavaScript" />
+                      <area shape="poly" coords="54,241,6,97,36,107,72,217"
+                            href="https://developer.mozilla.org/docs/Web/API"
+                            target="_blank" alt="Web APIs" />
+                      <area shape="poly" coords="6,97,130,6,130,39,36,107"
+                            href="https://developer.mozilla.org/docs/Web/CSS"
+                            target="_blank" alt="CSS" />
+                  </map>
+                  <img usemap="#infographic" src="https://developer.mozilla.org/media/examples/mdn-info.png" alt="MDN infographic" />
+                </code>
+              </pre>
+              <figcaption>&lt;area&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+
+      <section>
+        <h2 id="image-and-multimedia">Image and multimedia</h2>
+        <article>
+          <h3 id="area">&lt;area;&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <map name="infographic">
+                      <area shape="rect" coords="184,6,253,27"
+                            href="https://mozilla.org"
+                            target="_blank" alt="Mozilla" />
+                      <area shape="circle" coords="130,136,60"
+                            href="https://developer.mozilla.org/"
+                            target="_blank" alt="MDN" />
+                      <area shape="poly" coords="130,6,253,96,223,106,130,39"
+                            href="https://developer.mozilla.org/docs/Web/Guide/Graphics"
+                            target="_blank" alt="Graphics" />
+                      <area shape="poly" coords="253,96,207,241,189,217,223,103"
+                            href="https://developer.mozilla.org/docs/Web/HTML"
+                            target="_blank" alt="HTML" />
+                      <area shape="poly" coords="207,241,54,241,72,217,189,217"
+                            href="https://developer.mozilla.org/docs/Web/JavaScript"
+                            target="_blank" alt="JavaScript" />
+                      <area shape="poly" coords="54,241,6,97,36,107,72,217"
+                            href="https://developer.mozilla.org/docs/Web/API"
+                            target="_blank" alt="Web APIs" />
+                      <area shape="poly" coords="6,97,130,6,130,39,36,107"
+                            href="https://developer.mozilla.org/docs/Web/CSS"
+                            target="_blank" alt="CSS" />
+                  </map>
+                  <img usemap="#infographic" src="https://developer.mozilla.org/media/examples/mdn-info.png" alt="MDN infographic" />
+                </code>
+              </pre>
+              <figcaption>&lt;area&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+      <section>
+        <h2 id="embedded-content">Embedded content</h2>
+        <article>
+          <h3 id="embed">&lt;embed;&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <embed type="video/webm"
+                    src="https://developer.mozilla.org/media/examples/flower.mp4"
+                    width="250"
+                    height="200">
+                </code>
+              </pre>
+              <figcaption>&lt;embed&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+      <section>
+        <h2 id="scripting">Scripting</h2>
+        <article>
+          <h3 id="canvas">&lt;canvas;&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <canvas id="canvas" width="300" height="300">
+                    An alternative text describing what your canvas displays. 
+                  </canvas>
+                </code>
+              </pre>
+              <figcaption>&lt;canvas&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+      <section>
+        <h2 id="demarcating edits">Demarcating edits</h2>
+        <article>
+          <h3 id="del">&lt;del&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <blockquote>
+                      There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.
+                  </blockquote>
+                </code>
+              </pre>
+              <figcaption>&lt;del&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+      <section>
+        <h2 id="table-content">Table content</h2>
+        <article>
+          <h3 id="caption">&lt;caption;&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <table>
+                      <caption>He-Man and Skeletor facts</caption>
+                      <tr>
+                          <td> </td>
+                          <th scope="col" class="heman">He-Man</th>
+                          <th scope="col" class="skeletor">Skeletor</th>
+                      </tr>
+                      <tr>
+                          <th scope="row">Role</th>
+                          <td>Hero</td>
+                          <td>Villain</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Weapon</th>
+                          <td>Power Sword</td>
+                          <td>Havoc Staff</td>
+                      </tr>
+                      <tr>
+                          <th scope="row">Dark secret</th>
+                          <td>Expert florist</td>
+                          <td>Cries at romcoms</td>
+                      </tr>
+                  </table>
+                </code>
+              </pre>
+              <figcaption>&lt;area&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+      <section>
+        <h2 id="forms">Forms</h2>
+        <article>
+          <h3 id="button">&lt;button;&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <button class="favorite styled"
+                          type="button">
+                      Add to favorites
+                  </button>
+                </code>
+              </pre>
+              <figcaption>&lt;button&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+      <section>
+        <h2 id="interactive-elements">Interactive elements</h2>
+        <article>
+          <h3 id="details">&lt;details;&gt;</h3>
+          <section>
+            <h4>Example</h4>
+            <figure>
+              <pre>
+                <code class="html">
+                  <details>
+                      <summary>Details</summary>
+                      Something small enough to escape casual notice.
+                  </details>
+                </code>
+              </pre>
+              <figcaption>&lt;details&gt;</figcaption>
+            </figure>
+          </section>
+        </article>
+      </section>
+    </main>
+    <footer>
+    </footer>
+      <script>
+        function runCode (evt) {
+          const id = evt.detail.id
+          const iframe = document.getElementById(`iframe-${id}`)
+          const textarea = document.querySelector(`#${id}`).textContent
+
+          iframe.srcdoc = textarea
+        }
+
+        function main () {
+          // Initialize all code editors
+          document.querySelectorAll('.code').forEach(element => {
+            CodeMirror.fromTextArea(element, {
+              mode: 'xml',
+              htmlMode: true,
+              matchClosing: true,
+              alignCDATA: true,
+              lineNumbers: true,
+              lineWrapping: true,
+              tabSize: 2,
+              indentUnit: 2,
+              indentAuto: true,
+              smartIndent: true,
+              indentWithTabs: true,
+              extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+              foldGutter: true,
+              gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+            }).on('change', (editor, options) => {
+              element.innerHTML = editor.getValue()
+            })
+            const id = element.getAttribute('id')
+            runCode(new CustomEvent('run-code', { detail: { id }}))
+          })
+
+          // Add button listeners
+          document.querySelectorAll('.run-code').forEach(element => {
+            element.addEventListener('click', (evt) => {
+              const textarea = evt.target.form.querySelector('textarea')
+              const id = textarea.getAttribute('id')
+              evt.target.dispatchEvent(new CustomEvent('run-code', { detail: { id }}))
+              element.addEventListener('run-code', runCode)
+            })
+          })
+
+          document.querySelectorAll('form').forEach(element => {
+            element.addEventListener('submit', evt => evt.preventDefault())
+          })
+        }
+
+        window.onload = main
+      </script>
+  </body>
+</html>
+

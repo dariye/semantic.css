@@ -1,14 +1,25 @@
 html,
-body {
+body,
+del,
+ins,
+del,
+ins {
+  -webkit-animation: none 0s ease 0s 1 normal none running;
+  animation: none 0s ease 0s 1 normal none running;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
+  background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+  border: medium none currentColor;
   border-collapse: separate;
   -o-border-image: none;
   border-image: none;
+  border-radius: 0;
   border-spacing: 0;
   bottom: auto;
+  box-shadow: none;
   box-sizing: content-box;
   caption-side: top;
+  clear: none;
   clip: auto;
   color: #000;
   -webkit-columns: auto;
@@ -29,8 +40,11 @@ body {
   content: normal;
   counter-increment: none;
   counter-reset: none;
+  cursor: auto;
+  direction: ltr;
   display: inline;
   empty-cells: show;
+  float: none;
   font-family: serif;
   font-size: medium;
   font-style: normal;
@@ -44,8 +58,10 @@ body {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  left: auto;
   letter-spacing: normal;
   list-style: disc outside none;
+  margin: 0;
   max-height: none;
   max-width: none;
   min-height: 0;
@@ -56,6 +72,7 @@ body {
   overflow: visible;
   overflow-x: visible;
   overflow-y: visible;
+  padding: 0;
   page-break-after: auto;
   page-break-before: auto;
   page-break-inside: auto;
@@ -64,16 +81,22 @@ body {
   -webkit-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
   position: static;
+  right: auto;
   -moz-tab-size: 8;
   -o-tab-size: 8;
   tab-size: 8;
   table-layout: auto;
+  text-align: left;
+  text-align-last: auto;
   text-decoration: none;
   text-indent: 0;
+  text-shadow: none;
   text-transform: none;
   top: auto;
   -webkit-transform: none;
+  transform: none;
   -webkit-transform-origin: 50% 50% 0;
+  transform-origin: 50% 50% 0;
   -webkit-transform-style: flat;
   transform-style: flat;
   transition: none 0s ease 0s;
@@ -85,134 +108,7 @@ body {
   width: auto;
   word-spacing: normal;
   z-index: auto;
-  backface-visibility: visible;
-  border-collapse: separate;
-  border-image: none;
-  border-spacing: 0;
-  bottom: auto;
-  box-sizing: content-box;
-  caption-side: top;
-  clip: auto;
-  color: #000;
-  columns: auto;
-  column-count: auto;
-  column-fill: balance;
-  grid-column-gap: normal;
-  column-gap: normal;
-  column-rule: medium none currentColor;
-  column-span: 1;
-  column-width: auto;
-  content: normal;
-  counter-increment: none;
-  counter-reset: none;
-  display: inline;
-  empty-cells: show;
-  font-family: serif;
-  font-size: medium;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  font-stretch: normal;
-  line-height: normal;
-  height: auto;
-  hyphens: none;
-  letter-spacing: normal;
-  list-style: disc outside none;
-  max-height: none;
-  max-width: none;
-  min-height: 0;
-  min-width: 0;
-  opacity: 1;
-  orphans: 2;
-  outline: medium none invert;
-  overflow: visible;
-  overflow-x: visible;
-  overflow-y: visible;
-  page-break-after: auto;
-  page-break-before: auto;
-  page-break-inside: auto;
-  perspective: none;
-  perspective-origin: 50% 50%;
-  position: static;
-  tab-size: 8;
-  table-layout: auto;
-  text-decoration: none;
-  text-indent: 0;
-  text-transform: none;
-  top: auto;
-  transform-style: flat;
-  transition: none 0s ease 0s;
-  unicode-bidi: normal;
-  vertical-align: baseline;
-  visibility: visible;
-  white-space: normal;
-  widows: 2;
-  width: auto;
-  word-spacing: normal;
-  z-index: auto;
   all: initial;
-}
-
-html[dir],
-[dir] body {
-  border: medium none currentColor;
-  border-radius: 0;
-  box-shadow: none;
-  clear: none;
-  cursor: auto;
-  float: none;
-  margin: 0;
-  padding: 0;
-  text-align-last: auto;
-  text-shadow: none;
-  transform: none;
-  transform-origin: 50% 50% 0;
-  border: medium none currentColor;
-  border-radius: 0;
-  box-shadow: none;
-  clear: none;
-  cursor: auto;
-  float: none;
-  margin: 0;
-  padding: 0;
-  text-align-last: auto;
-  text-shadow: none;
-  transform: none;
-  transform-origin: 50% 50% 0;
-}
-
-html[dir=ltr],
-[dir=ltr] body {
-  -webkit-animation: none 0s ease 0s 1 normal none running;
-  animation: none 0s ease 0s 1 normal none running;
-  background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-  direction: ltr;
-  left: auto;
-  right: auto;
-  text-align: left;
-  animation: none 0s ease 0s 1 normal none running;
-  background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-  direction: ltr;
-  left: auto;
-  right: auto;
-  text-align: left;
-}
-
-html[dir=rtl],
-[dir=rtl] body {
-  -webkit-animation: none 0s ease 0s 1 normal none running;
-  animation: none 0s ease 0s 1 normal none running;
-  background: transparent none repeat 100% 0 / auto auto padding-box border-box scroll;
-  direction: rtl;
-  right: auto;
-  left: auto;
-  text-align: right;
-  animation: none 0s ease 0s 1 normal none running;
-  background: transparent none repeat 100% 0 / auto auto padding-box border-box scroll;
-  direction: rtl;
-  right: auto;
-  left: auto;
-  text-align: right;
 }
 
 /**
@@ -229,6 +125,10 @@ html[dir=rtl],
   --primary-color: black;
   --secondary-color: yellow;
   --accent-color: orange;
+  --color-success: green;
+  --color-danger: red;
+  --color-warning: orange;
+  --color-info: blue;
   --scale: 0.5;
   --font-size: calc(1vw + 1vh + 2.5vmin);
   --font-family-primary: "Open Sans", sans-serif;
@@ -249,15 +149,10 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
-}
-
-[dir] *,
-[dir] *::before,
-[dir] *::after {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: inherit;
 }
 
 
@@ -266,6 +161,7 @@ html {
  */
 
 body {
+  margin: 0;
   height: 100%;
   font-size: inherit;
   font-family: "Open Sans", sans-serif;
@@ -276,16 +172,23 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-[dir] body {
-  margin: 0;
   background-color: #ffffff;
 }
 
 /**
  * Content sectioning
  */
+
+article,
+aside,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
 
 address,
 article,
@@ -479,11 +382,24 @@ object
 /**
  * Demarcating edits
  */
-/*
-del
+del,
+ins {
+  display: inline-block;
+}
 
-ins
-*/
+del {
+  text-decoration: line-through;
+  color: inherit;
+  background-color: red;
+  background-color: var(--color-danger);
+}
+
+ins {
+  text-decoration: none;
+  background-color: green;
+  background-color: var(--color-success);
+}
+
 /**
  * Table content
  */
